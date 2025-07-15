@@ -1,3 +1,17 @@
+def get_book_text(book_id):
+    """
+    Fetches the text of a book given its ID.
+    Args: 
+        book_id (str): The ID of the book to fetch.
+    Returns:
+        str: The text of the book.
+    """
+    # Open the book file using the provided book_id
+    with open(book_id) as file:     # Open the file in read mode
+        book_text = file.read()     # Read the contents of the file as "book_text"
+    # Return the contents of the book
+    return book_text
+
 def count_words(book_text):
     """
     Counts the number of words in the given book_text string.
